@@ -1,6 +1,8 @@
 ### OVERVIEW ###
 Takes a US mailing address (including street, city, state, and zip) and looks up the corresponding Congressional District via AJAX. Geolocation (lat/long lookup) is first completed using the Google Maps API and then passed onto the Sunlight Labs API to obtain the congrssional district. The basic script returns a value in the form of "State Abbreviation-District #", such as MI-9 or CA-30.
 
+The "Look Up" is triggered when a 5 digit zip code has been entered; it will re-fire if the zip code is changed. Note that the Google Maps API determines the ultimate Geo code and will resolve conflicts as it deems fit (e.g., when the street address does not agree with the zip code).
+
 ### REQUIREMENTS ###
 PHP
 JQuery
