@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<title>Congressional District Look Up by Geo-Coded Address</title>
+		<link type="text/css" rel="stylesheet" href="css/screen.css" media="screen"/>
+	</head>
+	<body>
+		<div class="container">
+			<form method="post" id="form" name="form">
+			  <fieldset>
+				 <legend>Contact Information</legend>
+				 <div class="row">
+					<div class="span4">
+					    <label for="address1">Address 1</label>
+					    <input type="text" id="address1" name="address1" tabindex="1" />                                   
+					</div>
+					<div class="span4">
+					    <label for="address2">Address 2</label>
+					    <input type="text" id="address2" name="address2" tabindex="2" class="" />                              
+					</div>
+				 </div>
+				 <div class="row">
+					<div class="span4">
+					    <label for="city">City</label>
+					    <input type="text" id="city" name="city" tabindex="3" />                                 
+					</div>
+					<div class="span2">
+					    <label for="state">State</label>
+					    <input type="text" id="state" name="state" maxlength="2" tabindex="4" />
+					</div>
+					<div class="span3 offset1">
+					    <label for="zip">Zip </label>
+					    <input type="text" id="zip" name="zip" maxlength="5" tabindex="5" autocomplete="off">                    
+					</div>
+				 </div>
+				 <div class="row">
+				 	<div class="span12">
+					    <label for="district">District<span id="ajaxStatus"></span></label>		    
+					    <input type="text" name="district" id="district" />
+					</div>
+				 </div>
+			  </fieldset>
+			  <button type="submit" class="btn" name="submit">Submit</button>
+			</form>
+		</div>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script> 
+		<script src="http://maps.googleapis.com/maps/api/js?key=GOOGLEAPIKEY&amp;sensor=false"></script>
+		<script src="js/lookup.js"></script>
+	</body>
+</html>
