@@ -80,7 +80,7 @@
 			var addressB = document.getElementById(city).value;
 
 			// state
-			var addressB = document.getElementById(state).value;
+			var addressC = document.getElementById(state).value;
 
 			// zip
 			var addressD = document.getElementById(zip).value;
