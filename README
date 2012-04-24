@@ -10,7 +10,7 @@ The "Look Up" is triggered when a 5 digit zip code has been entered; it will re-
 -Sunlight Labs API Key
 
 ### USAGE ###
--Enter your Google Apps API Key on line 286 of form.php
+-Enter your Google Apps API Key on line 46 of index.html
 -Enter your Sunlight Labs API Key on line 9 of inc/sunlight-php/districtLookupByGeo.php
 
 
