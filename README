@@ -1,18 +1,19 @@
-<h2>### OVERVIEW ###</h2>
-<p>Takes a US mailing address (including street, city, state, and zip) and looks up the corresponding Congressional District via AJAX. Geolocation (lat/long lookup) is first completed using the Google Maps API and then passed onto the Sunlight Labs API to obtain the congrssional district. The basic script returns a value in the form of "State Abbreviation-District #", such as MI-9 or CA-30.</p>
+### OVERVIEW ###
+Takes a US mailing address (including street, city, state, and zip) and looks up the corresponding Congressional District via AJAX. Geolocation (lat/long lookup) is first completed using the Google Maps API and then passed onto the Sunlight Labs API to obtain the congrssional district. The basic script returns a value in the form of "State Abbreviation-District #", such as MI-9 or CA-30.
 
-<p>The "Look Up" is triggered when a 5 digit zip code has been entered; it will re-fire if the zip code is changed. Note that the Google Maps API determines the ultimate Geo code and will resolve conflicts as it deems fit (e.g., when the street address does not agree with the zip code).</p>
+The "Look Up" is triggered when a 5 digit zip code has been entered; it will re-fire if the zip code is changed. Note that the Google Maps API determines the ultimate Geo code and will resolve conflicts as it deems fit (e.g., when the street address does not agree with the zip code).
 
-<h2>### REQUIREMENTS ###</h2>
-<ul>
-	<li>PHP</li>
-	<li>JQuery</li>
-	<li>Google Apps API Key</li>
-	<li>Sunlight Labs API Key</li>
-</ul>
+### REQUIREMENTS ###
+-PHP
+-JQuery
+-Google Apps API Key
+-Sunlight Labs API Key
 
-<h2>### USAGE ###</h2>
-<ul>
-	<li>Enter your Google Apps API Key on line 286 of form.php</li>
-	<li>Enter your Sunlight Labs API Key on line 9 of inc/sunlight-php/districtLookupByGeo.php</li>
-</ul>
+### USAGE ###
+-Enter your Google Apps API Key on line 286 of form.php
+-Enter your Sunlight Labs API Key on line 9 of inc/sunlight-php/districtLookupByGeo.php
+
+
+### EXAMPLE ###
+Until I have to worry about my APIs being oversued, an example is available at: 
+http://www.technotarek.com/CongressionalDistrictLookUp/index.html
