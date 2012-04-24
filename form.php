@@ -5,7 +5,7 @@
 	</head>
 	<body>
 		<div class="container">
-		<form method="post" action="/submit.php" id="form" name="form">
+		<form method="post" id="form" name="form">
 		  <fieldset>
 			 <legend>Contact Information</legend>
 			 <div class="row">
