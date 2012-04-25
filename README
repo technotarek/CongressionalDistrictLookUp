@@ -13,7 +13,32 @@ The "Look Up" is triggered when a 5 digit zip code has been entered; it will re-
 -Enter your Google Apps API Key on line 46 of index.html
 -Enter your Sunlight Labs API Key on line 9 of inc/sunlight-php/districtLookupByGeo.php
 
+The project is configured to work with the supplied form. Revisions to input IDs in index.html, require similar changes to the following portion of js/lookup.js:
 
-### EXAMPLE ###
-Until I have to worry about my APIs being oversued, an example is available at: 
+	// Add Congressional District - Main Pledge Form
+	$("#zip").bind('keyup',function()
+	{
+		// when the entered zip code reaches 5 characters 
+		if(valueLength(this) > 4)
+		{
+			codeAddress('address1','city','state','zip','#district');
+		}
+	});
+
+Ensure that this function is bound to the zip code field using an approiate selector. Additionally, the "codeAddress" function takes 5 arguments: 
+
+(1) the ID of the street address input; 
+(2) the ID of the city input;
+(3) the ID of the state input;
+(4) the ID of the ZIP code input;
+(5) the selector for the target input (i.e., the destination of the returned congressional district)
+
+### DEMO ###
+For now, a working demo is available at: 
 http://www.technotarek.com/CongressionalDistrictLookUp/index.html
+
+### CREDITS ###
+The project includes a modified version of code of the Sunlight Labs API PHP Library orginally developed by Aaron Brazell (see http://emmense.com/sunlight-labs-php-library/). The modified version of the PHP Libaray fixes an issue described at http://code.google.com/p/sunlight-api/issues/detail?id=1#c2 where the PHP Library failed upon supplying a ZIP code beginning with a zero. The fix does not actually impact this particluar implementation of the PHP Library, since the fix applies to a part of the library not used by this Git project. However, it seemed appropriate to distribute the modified version in the event the project is forked and modified. All other code in the PHP library (inc/sunlight-php/class.sunlightlabs.mod.php) reflects the original Library code.
+
+
+
